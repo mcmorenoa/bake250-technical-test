@@ -1,0 +1,11 @@
+index:
+  path: /
+  controller: App\Infrastructure\Controller\SearchTweetsController::index
+
+sorting:
+  path: /sorting
+  controller: App\Infrastructure\Controller\AlgorithmsController::sort
+
+replace:
+  path: /replace
+  controller: App\Infrastructure\Controller\AlgorithmsController::replace

@@ -1,0 +1,32 @@
+{% extends 'base.html.twig' %}
+
+{% set page_title = 'Search tweets' %}
+
+{% block body %}
+    <div class="container">
+        <div class="row text-center justify-content-md-center">
+            <h1>Search recent tweets</h1>
+            <div class="row justify-content-md-center">
+                <div class="col-md-4">
+                    {{ form_start(form) }}
+                    {{ form_row(form.username) }}
+                    {{ form_row(form.submit) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                {% if tweets is defined %}
+                    {% for tweet in tweets %}
+                        <div class="col-md-8 tweet rounded">
+                            {{ tweet.text }}
+                        </div>
+                    {% endfor %}
+                {% else %}
+                    {% if error is defined %}
+                        <p>Oops, no recent tweets have been found...</p>
+                    {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+{% endblock %}

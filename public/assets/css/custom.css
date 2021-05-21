@@ -1,0 +1,8 @@
+.tweet {
+    border: 1px solid lightgrey;
+    margin-top: 10px;
+    text-align: justify;
+    font-size: 1.25em;
+    box-sizing: border-box;
+    padding: 15px;
+}
